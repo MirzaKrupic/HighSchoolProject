@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+	 <meta charset="utf-8">
+	 <meta name="viewport" content="width=device-width">
+	 <title>Cener</title>
+	 <link rel="stylesheet" type="text/css" href="./css/style.css">
+	 <link rel="shortcut icon" href="./img/km10a.ico"/>
+	 <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+	     <script src="https://code.jquery.com/jquery-2.1.0.js"></script>
+</head>
+<body>
+	<header>
+		<div class="container">
+			<div id="branding">
+				<h1><span class="highlight">cener</span>.ba</h1>
+			</div>
+			<nav>
+				<ul>
+					<li><a href="index.html">pocetna</a></li>
+					<li><a href="onama.html">o nama</a></li>
+					<li><a href="reg.html">registracija</a></li>
+					<li><a href="login.html">log in</a></li>
+					<li><a href="">Kategorije</a>
+						<ul>
+						<li><a href="wd.html">Web dizajn</a></li>
+						<li><a href="gd.html">Graficki dizajn</a></li>
+						<li><a href="ve.html">Video edit</a></li>
+						<li><a href="">Voiceover</a></li>
+						</ul>	
+					</li>
+					<li class="current"><a href="igrica.html">Igrica</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+
+<div id="igra">
+	<div>
+    <h1 id="naslovig">Pronađi freelancera!</h1>
+ <img style="width: 80%;" id="blago" width=400 height=400
+ src="./img/treasuremap.jpg"></img>
+</div>
+<div id="infoig">
+	<h2 id="ime">Ime i prezime:</h2>
+	<h2 id="brpok">Broj pokusaja:</h2>
+	</div>
+
+	<script>
+
+		var clicks = 0;
+		var pagex = 0;
+		var pagey = 0;
+		var udaljenost = 0;
+		var size = 400;
+
+		
+ var width = 400;
+var height = 400;
+
+
+var getRandomNumber = function (size)
+{
+return  Math.floor(Math.random() * size);
+}
+
+var targetX = getRandomNumber(size-1);
+var targetY=getRandomNumber(size-1);
+
+
+
+$( "#blago" ).click(function(e) {
+clicks++;
+izmjena(clicks);
+pagex= e.pageX;
+pagey = e.pageY;
+var diffX = pagex - targetX;
+
+var diffY = pagey - targetY;
+
+
+
+var rez = Math.sqrt((diffX * diffX) + (diffY * diffY));
+
+var rez1 = getDistanceHint(rez);
+alert(rez1);
+
+});
+
+
+
+
+var getDistanceHint = function (rez) {
+	var distance = rez;
+if (distance < 8) {
+  var popust = 100 - clicks;
+return "Čestitamo!\nOsvojili ste besplatan PhotoShop ";
+} 
+else if (distance <10 ) {
+return "Vrelo!";
+}else if (distance < 20) {
+return "Veoma toplo";
+} else if (distance < 40) {
+return "Toplije";
+} else if (distance < 80) {
+return "Toplo";
+} else if (distance < 160) {
+return "Hladno";
+} else if (distance < 320) {
+return "Veoma hladno";
+} 
+else { 
+  return "Ledeno!";
+}
+};
+
+var starinaslov = document.getElementById("ime");
+var novinaslov = prompt("Unesite ime i prezime");
+starinaslov.innerHTML = "Ime i prezime: "+ novinaslov;
+
+var izmjena = function()
+{
+  var starirez= document.getElementById("brpok");
+starirez.innerHTML = "Broj pokusaja: " + clicks;
+}
+
+	
+	</script>
+</div>
+
+<div class="SocialMedia">
+			<ul>
+				<li><a href="a"><i class="ion-social-facebook"></i></a></li>
+				<li><a href="b"><i class="ion-social-instagram"></i></a></li>
+				<li><a href="c"><i class="ion-social-whatsapp"></i></a></li>
+				<li><a href="c"><i class="ion-social-twitter"></i></a></li>
+			</ul>
+		</div>
+
+
+
+	<footer>
+		<p>cener.ba, Copyright &copy; 2018</p>
+	</footer>
+</body>
+</html>

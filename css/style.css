@@ -1,0 +1,332 @@
+body{
+  font: 15px/1.5 Arial, Helvetica,sans-serif;
+  padding:0;
+  margin:0;
+  background-color:#f4f4f4;
+}
+
+/* Global */
+header #branding h1{
+	text-transform: uppercase;
+}
+
+.container{
+  width:80%;
+  margin:auto;
+  overflow:hidden;
+}
+
+ul{
+  margin:0;
+  padding:0;
+}
+
+.dugme_1{
+  height:38px;
+  background:#417a02;
+  border:0;
+  padding-left: 20px;
+  padding-right:20px;
+  color:#ffffff;
+}
+.dugme_2{
+  height:38px;
+  background:#324159;
+  border:0;
+  padding-left: 20px;
+  padding-right:20px;
+  color:#ffffff;
+}
+
+.dugme_2:hover{
+	background:#417a02;
+}
+
+.dark{
+	padding: 15px;
+	background: #324159;
+	color: white;
+}
+
+/* header **/
+header{
+	background: #324159;
+	color: white;
+	padding-top: 30px;
+	min-height: 70px;
+	border-bottom: #417a02 3px solid;
+}
+
+header a{
+	color: white;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-size: 16px;
+}
+
+
+
+header li{
+	float: left;
+	display: inline;
+	padding: 0 20px 0 20px;
+}
+
+header #branding{
+	float: left;
+}
+
+header #branding h1{
+	margin: 0;
+}
+
+header nav{
+	float: right;
+	margin-top: 10px;
+}
+
+header ul li{
+
+	list-style: none;
+
+}
+
+header ul li ul{
+
+	display: block;
+	position: absolute;
+	
+}
+
+header ul li ul li{
+	width: 150px;
+	background-color: #4f5968;	
+}
+
+header ul li ul li:hover{
+	background-color: #417a02;	
+
+}
+header ul li ul li a:hover{
+	color: #000000;	
+	
+}
+
+header ul li ul li{
+	display: none;
+}
+
+header ul li:hover ul li{
+
+	display: block;
+}
+
+header .highlight, header .current a{
+	color:#417a02;
+	font-weight: bold;
+}
+
+header a:hover{
+	color:grey;
+	font-weight: bold;
+}
+
+/* showcase */
+#showcase{
+	min-height: 400px;
+	background:url('../img/freelancer.jpg') no-repeat 0 -400px;
+	text-align: center;
+	color: #0061ff;
+}
+
+#showcase h1{
+	margin-top: 100px;
+	font-size: 55px;
+	margin-bottom: 10px;
+}
+
+#showcase p{
+	font-size: 20px;
+}
+#pretraga{
+	padding: 15px;
+	color: white;
+	background: #324159;
+}
+
+#pretraga h1{
+	float: left;
+}
+#pretraga form{
+	float: right;
+	margin-top: 15px;
+}
+#pretraga input[type="text"]{
+	padding: 4px;
+	height: 25px;
+	width: 250px;
+}
+
+/*boxes*/
+
+#boxes{
+	margin-top: 20px;
+
+}
+#boxes .box{
+	float: left;
+	width: 30%;
+	padding: 10px;
+	text-align: center;
+}
+
+#boxes .box img{
+	width: 90px;
+}
+
+.SocialMedia{
+	margin-left: 39%;
+	margin-top: 10px;
+		 
+}
+
+.SocialMedia ul{
+	list-style: none;
+
+}
+
+.SocialMedia li{
+	display: inline-block;
+	width: 50px;
+	height: 50px;
+	margin-right: 15px;
+	box-shadow: 0px 1px 3px rgb(0,0,0, .3);
+	border-radius: 50px;
+	position: relative;
+	overflow: hidden;
+
+
+}
+
+.SocialMedia li a{
+	color: #373737;
+	font-size: 30px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50% ,-50%);
+	transition: .5s;
+
+}
+
+.SocialMedia li:before{
+	content: '' ;
+	width: 100%;
+	height: 100%;
+	top: 100%;
+	left: 0%;
+	display: inline-block;
+	background-color: #3B5998;
+	position: absolute;
+	transition: .5s;
+
+}
+
+.SocialMedia li:nth-child(1):before{
+		background-color: #3B5998;
+	}
+
+.SocialMedia li:nth-child(4):before{
+		background-color: #1da1f2;
+}
+
+.SocialMedia li:nth-child(2):before{
+		background-color: #cd486b;
+}
+
+.SocialMedia li:nth-child(3):before{
+		background-color: #675CA8;
+}
+
+.SocialMedia li:hover:before{
+	top: 0%;
+}
+
+.SocialMedia li a:hover{
+	color: white;
+	
+
+}
+
+/*sidebar*/
+aside#sidebar{
+	float: right;
+	width: 30%;
+	margin-top: 15px;
+}
+
+/*main*/
+article#main{
+	float: left;
+	width: 65%;
+}
+
+footer{
+	padding: 20px;
+	margin-top: 20px;
+	color: white;
+	background-color: #324159;
+	text-align: center;
+}
+ .registracija input[type=text], input[type=password] , input[type=email] {
+  width: 95%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border-color: #324159;
+  background: #f1f1f1;
+}
+
+
+#produkti{
+	margin-top: 20px;
+}
+#produkti .produkt {
+	display: block;
+	margin-bottom:  100px;
+}
+
+#produkti .produkt img{
+	float: left;
+	width: 50%;
+	
+}
+
+#produkti .produkt h3{
+	display: block;
+	text-transform: uppercase;
+	text-align: center;
+}
+
+#produkti .produkt p{
+	font-style: italic;
+	text-align: center;
+}
+
+#produkti .produkt button{
+	margin-left: 22%;
+}
+
+#igra{
+	margin-left: 22%;
+}
+
+#naslovig{
+	margin-left: 22%;
+}
+
+#infoig{
+	margin-left: 22%;
+}
+
+
